@@ -1,0 +1,182 @@
+Call:
+rpart(formula = cnt ~ ., data = train_data, method = "anova")
+  n= 540 
+
+      CP nsplit rel error xerror  xstd
+1  0.371      0      1.00   1.01 0.047
+2  0.197      1      0.63   0.65 0.035
+3  0.085      2      0.43   0.44 0.034
+4  0.046      3      0.35   0.37 0.033
+5  0.037      4      0.30   0.34 0.031
+6  0.028      5      0.26   0.32 0.031
+7  0.016      6      0.24   0.31 0.032
+8  0.015      7      0.22   0.30 0.028
+9  0.011      8      0.21   0.28 0.026
+10 0.010      9      0.20   0.27 0.026
+
+Variable importance
+      atemp         yr0         yr1     season1     season3       mnth1         hum      mnth12     season4       mnth2 
+         22          15          15          13           6           5           5           4           4           4 
+     mnth11   windspeed weathersit3 workingday0 workingday1 
+          2           2           1           1           1 
+
+Node number 1: 540 observations,    complexity param=0.37
+  mean=4.4e+03, MSE=3.5e+06 
+  left son=2 (232 obs) right son=3 (308 obs)
+  Primary splits:
+      atemp   < 0.43 to the left,  improve=0.37, (0 missing)
+      season1 < 0.5  to the right, improve=0.32, (0 missing)
+      yr0     < 0.5  to the right, improve=0.29, (0 missing)
+      yr1     < 0.5  to the left,  improve=0.29, (0 missing)
+      season3 < 0.5  to the left,  improve=0.14, (0 missing)
+  Surrogate splits:
+      season1 < 0.5  to the right, agree=0.78, adj=0.49, (0 split)
+      season3 < 0.5  to the left,  agree=0.69, adj=0.28, (0 split)
+      mnth1   < 0.5  to the right, agree=0.66, adj=0.20, (0 split)
+      mnth12  < 0.5  to the right, agree=0.65, adj=0.19, (0 split)
+      mnth2   < 0.5  to the right, agree=0.64, adj=0.16, (0 split)
+
+Node number 2: 232 observations,    complexity param=0.085
+  mean=3.1e+03, MSE=2.2e+06 
+  left son=4 (119 obs) right son=5 (113 obs)
+  Primary splits:
+      yr1     < 0.5  to the left,  improve=0.31, (0 missing)
+      yr0     < 0.5  to the right, improve=0.31, (0 missing)
+      season4 < 0.5  to the left,  improve=0.31, (0 missing)
+      season1 < 0.5  to the right, improve=0.28, (0 missing)
+      atemp   < 0.26 to the left,  improve=0.24, (0 missing)
+  Surrogate splits:
+      yr0       < 0.5  to the right, agree=1.00, adj=1.000, (0 split)
+      hum       < 0.57 to the right, agree=0.57, adj=0.115, (0 split)
+      windspeed < 0.2  to the right, agree=0.57, adj=0.115, (0 split)
+      atemp     < 0.26 to the left,  agree=0.56, adj=0.106, (0 split)
+      mnth11    < 0.5  to the left,  agree=0.56, adj=0.088, (0 split)
+
+Node number 3: 308 observations,    complexity param=0.2
+  mean=5.4e+03, MSE=2.2e+06 
+  left son=6 (153 obs) right son=7 (155 obs)
+  Primary splits:
+      yr0         < 0.5  to the right, improve=0.55, (0 missing)
+      yr1         < 0.5  to the left,  improve=0.55, (0 missing)
+      hum         < 0.85 to the right, improve=0.18, (0 missing)
+      weathersit3 < 0.5  to the right, improve=0.13, (0 missing)
+      weathersit1 < 0.5  to the left,  improve=0.10, (0 missing)
+  Surrogate splits:
+      yr1         < 0.5  to the left,  agree=1.00, adj=1.000, (0 split)
+      hum         < 0.65 to the right, agree=0.56, adj=0.105, (0 split)
+      windspeed   < 0.18 to the right, agree=0.56, adj=0.105, (0 split)
+      workingday0 < 0.5  to the right, agree=0.55, adj=0.098, (0 split)
+      workingday1 < 0.5  to the left,  agree=0.55, adj=0.098, (0 split)
+
+Node number 4: 119 observations,    complexity param=0.037
+  mean=2.3e+03, MSE=1e+06 
+  left son=8 (80 obs) right son=9 (39 obs)
+  Primary splits:
+      season4 < 0.5  to the left,  improve=0.59, (0 missing)
+      season1 < 0.5  to the right, improve=0.47, (0 missing)
+      atemp   < 0.31 to the left,  improve=0.28, (0 missing)
+      mnth1   < 0.5  to the right, improve=0.20, (0 missing)
+      mnth11  < 0.5  to the left,  improve=0.18, (0 missing)
+  Surrogate splits:
+      season1   < 0.5  to the right, agree=0.87, adj=0.59, (0 split)
+      mnth11    < 0.5  to the left,  agree=0.80, adj=0.38, (0 split)
+      mnth10    < 0.5  to the left,  agree=0.75, adj=0.23, (0 split)
+      windspeed < 0.11 to the right, agree=0.75, adj=0.23, (0 split)
+      mnth12    < 0.5  to the left,  agree=0.72, adj=0.15, (0 split)
+
+Node number 5: 113 observations,    complexity param=0.046
+  mean=3.9e+03, MSE=2.1e+06 
+  left son=10 (60 obs) right son=11 (53 obs)
+  Primary splits:
+      season1 < 0.5  to the right, improve=0.37, (0 missing)
+      atemp   < 0.27 to the left,  improve=0.37, (0 missing)
+      season4 < 0.5  to the left,  improve=0.29, (0 missing)
+      mnth11  < 0.5  to the left,  improve=0.14, (0 missing)
+      hum     < 0.69 to the right, improve=0.14, (0 missing)
+  Surrogate splits:
+      season4 < 0.5  to the left,  agree=0.92, adj=0.83, (0 split)
+      mnth11  < 0.5  to the left,  agree=0.75, adj=0.47, (0 split)
+      atemp   < 0.27 to the left,  agree=0.72, adj=0.40, (0 split)
+      mnth1   < 0.5  to the right, agree=0.71, adj=0.38, (0 split)
+      mnth2   < 0.5  to the right, agree=0.64, adj=0.23, (0 split)
+
+Node number 6: 153 observations,    complexity param=0.016
+  mean=4.3e+03, MSE=7.2e+05 
+  left son=12 (7 obs) right son=13 (146 obs)
+  Primary splits:
+      hum         < 0.9  to the right, improve=0.28, (0 missing)
+      weathersit3 < 0.5  to the right, improve=0.27, (0 missing)
+      weathersit1 < 0.5  to the left,  improve=0.23, (0 missing)
+      atemp       < 0.56 to the left,  improve=0.16, (0 missing)
+      mnth6       < 0.5  to the left,  improve=0.07, (0 missing)
+  Surrogate splits:
+      weathersit3 < 0.5  to the right, agree=0.99, adj=0.71, (0 split)
+
+Node number 7: 155 observations,    complexity param=0.028
+  mean=6.5e+03, MSE=1.3e+06 
+  left son=14 (9 obs) right son=15 (146 obs)
+  Primary splits:
+      hum         < 0.83 to the right, improve=0.270, (0 missing)
+      weathersit1 < 0.5  to the left,  improve=0.140, (0 missing)
+      windspeed   < 0.19 to the right, improve=0.120, (0 missing)
+      atemp       < 0.5  to the left,  improve=0.110, (0 missing)
+      mnth9       < 0.5  to the left,  improve=0.082, (0 missing)
+  Surrogate splits:
+      weathersit3 < 0.5  to the right, agree=0.96, adj=0.33, (0 split)
+
+Node number 8: 80 observations
+  mean=1.7e+03, MSE=3.3e+05 
+
+Node number 9: 39 observations
+  mean=3.4e+03, MSE=5.6e+05 
+
+Node number 10: 60 observations,    complexity param=0.015
+  mean=3.1e+03, MSE=1e+06 
+  left son=20 (34 obs) right son=21 (26 obs)
+  Primary splits:
+      atemp       < 0.29 to the left,  improve=0.45, (0 missing)
+      mnth12      < 0.5  to the right, improve=0.30, (0 missing)
+      hum         < 0.68 to the right, improve=0.20, (0 missing)
+      weathersit1 < 0.5  to the left,  improve=0.18, (0 missing)
+      workingday0 < 0.5  to the right, improve=0.13, (0 missing)
+  Surrogate splits:
+      weekday2    < 0.5  to the left,  agree=0.62, adj=0.115, (0 split)
+      hum         < 0.51 to the left,  agree=0.62, adj=0.115, (0 split)
+      weekday5    < 0.5  to the left,  agree=0.60, adj=0.077, (0 split)
+      weathersit1 < 0.5  to the left,  agree=0.60, adj=0.077, (0 split)
+      windspeed   < 0.33 to the left,  agree=0.60, adj=0.077, (0 split)
+
+Node number 11: 53 observations,    complexity param=0.011
+  mean=4.9e+03, MSE=1.7e+06 
+  left son=22 (9 obs) right son=23 (44 obs)
+  Primary splits:
+      hum         < 0.77 to the right, improve=0.230, (0 missing)
+      atemp       < 0.39 to the left,  improve=0.140, (0 missing)
+      weekday0    < 0.5  to the right, improve=0.140, (0 missing)
+      weathersit1 < 0.5  to the left,  improve=0.073, (0 missing)
+      workingday1 < 0.5  to the left,  improve=0.042, (0 missing)
+
+Node number 12: 7 observations
+  mean=2.3e+03, MSE=1.2e+05 
+
+Node number 13: 146 observations
+  mean=4.4e+03, MSE=5.4e+05 
+
+Node number 14: 9 observations
+  mean=4.1e+03, MSE=2.4e+06 
+
+Node number 15: 146 observations
+  mean=6.7e+03, MSE=8.5e+05 
+
+Node number 20: 34 observations
+  mean=2.5e+03, MSE=7.5e+05 
+
+Node number 21: 26 observations
+  mean=3.9e+03, MSE=3.3e+05 
+
+Node number 22: 9 observations
+  mean=3.5e+03, MSE=2.3e+06 
+
+Node number 23: 44 observations
+  mean=5.2e+03, MSE=1.1e+06 
+

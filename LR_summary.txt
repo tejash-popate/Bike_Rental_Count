@@ -1,0 +1,53 @@
+
+Call:
+lm(formula = cnt ~ ., data = train_data)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+ -3871   -334     87    456   1587 
+
+Coefficients: (8 not defined because of singularities)
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   2171.7      488.4    4.45  1.1e-05 ***
+season1      -1577.9      198.1   -7.97  1.1e-14 ***
+season2       -557.0      234.7   -2.37  0.01801 *  
+season3       -564.7      209.3   -2.70  0.00722 ** 
+season4           NA         NA      NA       NA    
+yr0          -1914.5       66.6  -28.74  < 2e-16 ***
+yr1               NA         NA      NA       NA    
+mnth1           57.8      200.3    0.29  0.77288    
+mnth2          303.3      203.4    1.49  0.13662    
+mnth3          439.5      203.5    2.16  0.03121 *  
+mnth4          318.3      271.7    1.17  0.24191    
+mnth5          562.0      284.7    1.97  0.04891 *  
+mnth6          476.0      287.0    1.66  0.09783 .  
+mnth7         -143.7      310.5   -0.46  0.64378    
+mnth8          412.4      289.8    1.42  0.15536    
+mnth9         1003.5      231.7    4.33  1.8e-05 ***
+mnth10         519.2      179.8    2.89  0.00405 ** 
+mnth11         -63.6      169.8   -0.37  0.70798    
+mnth12            NA         NA      NA       NA    
+holiday0       749.9      224.9    3.33  0.00092 ***
+holiday1          NA         NA      NA       NA    
+weekday0      -451.5      130.2   -3.47  0.00057 ***
+weekday1       -36.1      129.3   -0.28  0.78027    
+weekday2        93.3      121.8    0.77  0.44399    
+weekday3       176.7      125.8    1.40  0.16083    
+weekday4       232.6      123.5    1.88  0.06027 .  
+weekday5       190.4      123.5    1.54  0.12373    
+weekday6          NA         NA      NA       NA    
+workingday0       NA         NA      NA       NA    
+workingday1       NA         NA      NA       NA    
+weathersit1   2040.2      228.0    8.95  < 2e-16 ***
+weathersit2   1538.0      206.5    7.45  4.1e-13 ***
+weathersit3       NA         NA      NA       NA    
+atemp         4773.1      504.1    9.47  < 2e-16 ***
+hum          -1378.1      351.7   -3.92  0.00010 ***
+windspeed    -2097.5      499.8   -4.20  3.2e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 751 on 512 degrees of freedom
+Multiple R-squared:  0.849,	Adjusted R-squared:  0.841 
+F-statistic:  107 on 27 and 512 DF,  p-value: <2e-16
+
